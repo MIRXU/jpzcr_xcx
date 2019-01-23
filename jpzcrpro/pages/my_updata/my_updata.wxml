@@ -1,0 +1,10 @@
+<!--my_updata/my_updata.wxml-->
+  <view wx:for="{{music}}" wx:key="key" wx:for-item="item" class='link_music'>
+    <text class='link_index'>{{index+1}}</text>
+    <text class='link_musicname'>{{item.music}}</text>
+    <text class='link_author'>{{item.author}}</text>
+    <text class='link_time'>{{item.time}}</text>
+    <text>{{item.updata_time}}</text>
+    <text>{{item.isdelete}}</text>
+  </view>
+

@@ -1,0 +1,19 @@
+<!--pages/music_house/music_detail/music_detail.wxml-->
+<view class='music_detail'>
+
+<audio
+  poster="{{poster}}"
+  name="{{name}}"
+  author="{{author}}"
+  src="{{src}}"
+  id="myAudio"
+  controls
+  loop
+></audio>
+
+<image src='../../images/backward.png' bindtap="audio14"></image> 
+<image src='../../images/play.png' bindtap="audioPlay"></image> 
+<image src='../../images/pause.png' bindtap="audioPause"></image> 
+<image src='../../images/forward.png' bindtap="audioStart"></image> 
+
+</view>

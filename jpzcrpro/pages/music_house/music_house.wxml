@@ -1,0 +1,90 @@
+<!--music_house/music_house.wxml-->
+<view>
+
+<!-- <view wx:for="{{navbar}}" wx:key="{{key}}" wx:for-item="item" >
+ <text
+    bindtap='navbarClick'
+    class='music_house_nav'
+    url="{{item.url}}"
+    hover-class="navigator-hover">
+    {{item.name}}
+ </text>
+</view> -->
+
+<text 
+  wx:for="{{navbar}}"
+  data-idx="{{index}}"
+  class="{{currentTab==index ? 'active' : ''}} music_house_nav"
+  wx:key="unique"
+  bindtap="navbarClick">
+  {{item.name}}
+</text>
+
+
+<view>
+
+
+<!--首页-->
+<view hidden="{{currentTab!==0}}">
+    <text class='music_good'>歌曲推荐</text>
+    <scroll-view scroll-x style='width:100%;white-space:nowrap'>
+      <navigator 
+       url="./music_detail/music_detail"
+        wx:for="{{music_good}}" wx:key="{{key}}" wx:for-item="item"                    class='music_item'>
+        <image src='{{item.img_url}}'></image>
+        <text>{{item.music_name}}</text>
+        <text>播放量：{{item.play}}</text>
+      </navigator>
+    </scroll-view>
+    <text class='music_good'>最新歌单</text>
+    <scroll-view scroll-x="true" style='width:100%;white-space:nowrap'>
+
+      <navigator 
+       url="./music_detail/music_detail" 
+      wx:for="{{music_good}}" wx:key="{{key}}" wx:for-item="item"               class='music_item'>
+        <image src='{{item.img_url}}'></image>
+        <text>{{item.music_name}}</text>
+        <text>播放量：{{item.play}}</text>
+      </navigator>
+    </scroll-view>
+    <text class='music_good'>清唱榜单</text>
+    <scroll-view scroll-x="true" style='width:100%;white-space:nowrap'>
+
+      <navigator 
+       url="./music_detail/music_detail" 
+      wx:for="{{music_good}}" wx:key="{{key}}" wx:for-item="item"             class='music_item'>
+        <image src='{{item.img_url}}'></image>
+        <text>{{item.music_name}}</text>
+        <text>播放量：{{item.play}}</text>
+      </navigator>
+    </scroll-view>
+
+
+</view>
+ 
+<!--排行榜-->
+<view hidden="{{currentTab!==1}}">
+  <view wx:for="{{music_link}}" wx:key="key" wx:for-item="item" class='link_music'>
+    <text class='link_index'>{{index+1}}</text>
+    <text class='link_musicname'>{{item.music}}</text>
+    <text class='link_author'>{{item.author}}</text>
+    <text class='link_time'>{{item.time}}</text>
+  </view>
+</view>
+ 
+<!--作曲人-->
+<view hidden="{{currentTab!==2}}">
+  <view wx:for="{{author}}" wx:key="key" wx:for-item="item" class="author">
+    <image src='{{item.url}}'></image>
+    <text>{{item.author_name}}</text>
+  </view>
+</view>
+
+<!--曲目种类-->
+<view hidden="{{currentTab!==3}}">
+  tab_04
+</view>
+
+
+</view>
+</view>

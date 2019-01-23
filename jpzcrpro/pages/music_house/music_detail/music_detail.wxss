@@ -1,0 +1,20 @@
+/* pages/music_house/music_detail/music_detail.wxss */
+.music_detail{
+    background: url("http://192.168.1.28:8080/static/img/login_bg.2628f5f.jpg");
+    width: 100%;
+    height: 100%;
+    top:0;
+    z-index: -1; 
+    position: absolute;
+    background-repeat: no-repeat;
+}
+.music_detail audio{
+  width: 100%;
+  border: 0px;
+  background: null;
+}
+.music_detail image{
+  text-align: center;
+  width: 40px;
+  height: 40px;
+}

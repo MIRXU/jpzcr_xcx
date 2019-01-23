@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/music_house/music_house",
+    "pages/music_house/music_detail/music_detail",
+    "pages/my_info/my_info",
+    "pages/my_music/my_music",
+    "pages/my_updata/my_updata"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/music_house/music_house",
+        "text": "音乐馆",
+         "iconPath": "/pages/images/music_house_no.png",
+         "selectedIconPath": "/pages/images/music_house.png"
+      },
+      {
+        "pagePath": "pages/my_music/my_music",
+        "text": "音乐",
+        "iconPath": "/pages/images/music_no.png",
+        "selectedIconPath": "/pages/images/music.png"
+      },
+      {
+        "pagePath": "pages/my_updata/my_updata",
+        "text": "上传",
+        "iconPath": "/pages/images/my_updata_no.png",
+        "selectedIconPath": "/pages/images/my_updata.png"
+      },
+      {
+        "pagePath": "pages/my_info/my_info",
+        "text": "我的",
+        "iconPath": "/pages/images/my_no.png",
+        "selectedIconPath": "/pages/images/my.png"
+      }
+    ]
+  }
+}
